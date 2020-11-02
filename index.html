@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YouTube video finder</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>National Parks Information Finder</h1>
+        <!--Form to submit search parameters-->
+        <form id="js-form">
+            <!--Input box for search terms-->
+            <label for="js-search-term">Enter your requested state(s) by 2-character abbreviation, separated by commas.</label>
+            <input type="text" name="search-term" id="js-search-term" required>
+            <!--Input box for maximum results to return, default is 10-->
+            <label for="js-max-results">Maximum results to show</label>
+            <input type="number" name="max-results" id="js-max-results" value="10">
+            <!--Button to start the search-->
+            <input type="submit" value="Let's go!">
+        </form>
+
+        <p id="js-error-message" class="error-message"></p>
+
+        <section id="results" class="hidden">
+            <h3>Here are your results</h3>
+            <ul id="results-list">
+            </ul>
+        </section>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
